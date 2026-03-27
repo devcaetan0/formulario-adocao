@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,27 +15,27 @@
         <form action="">
 
             <label for="nome">Nome completo:</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
             <div id="erro_nome" class="erro"></div>
 
             <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com">
             <div id="erro_email" class="erro"></div>
 
             <label for="telefone">Número de telefone:</label><br>
-            <input type="tel" id="telefone" name="telefone" placeholder="+55 (00) 90000-0000" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="+55 (00) 90000-0000">
             <div id="erro_telefone" class="erro"></div>
 
             <label for="cpf">CPF:</label><br>
-            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
             <div id="erro_cpf" class="erro"></div>
 
             <label for="nascimento">Data de nascimento:</label><br>
-            <input type="date" id="nascimento" name="nascimento" required>
+            <input type="date" id="nascimento" name="nascimento">
             <div id="erro_nascimento" class="erro"></div>
 
             <label for="cidade">Cidade:</label><br>
-            <input type="text" id="cidade" name="cidade" placeholder="Sua Cidade" required>
+            <input type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
             <div id="erro_cidade" class="erro"></div>
 
             <label for="moradia">Tipo de moradia:</label><br>
@@ -63,8 +63,12 @@
             <input type="number" id="horas_sozinho" name="horas_sozinho" placeholder="0" min="0" max="24"><br>
 
             <label for="biografia">Motivo da adoção:</label><br>
-            <textarea name="biografia" id="biografia" placeholder="Explique o motivo aqui." rows="4"></textarea>
+            <textarea name="biografia" id="biografia" placeholder="Explique o motivo aqui."></textarea>
             <div id="erro_biografia" class="erro"></div>
+
+            <input type="checkbox" id="termo" name="termo">
+            <label for="termo">Aceito os termos de responsabilidade.</label>
+            <div id="erro_termo" class="erro"></div>
 
             <button type="submit">Enviar Formulário</button>
 
