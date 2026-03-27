@@ -20,15 +20,40 @@ form.addEventListener('submit', function (e) {
     let motivo = document.getElementById('motivo').value;
     let termo = document.getElementById('termo').value;
 
-    document.getElementById('erro_nome').value;
-    document.getElementById('erro_email').value;
-    document.getElementById('erro_telefone').value;
-    document.getElementById('erro_cpf').value;
-    document.getElementById('erro_nascimento').value;
-    document.getElementById('erro_cidade').value;
-    document.getElementById('erro_quintal').value;
-    document.getElementById('erro_cuidou').value;
-    document.getElementById('erro_horas').value;
-    document.getElementById('erro_motivo').value;
-    document.getElementById('erro_termo').value;
+    document.getElementById('erro_nome').textContent = '';
+    document.getElementById('erro_email').textContent = '';
+    document.getElementById('erro_telefone').textContent = '';
+    document.getElementById('erro_cpf').textContent = '';
+    document.getElementById('erro_nascimento').textContent = '';
+    document.getElementById('erro_cidade').textContent = '';
+    document.getElementById('erro_quintal').textContent = '';
+    document.getElementById('erro_cuidou').textContent = '';
+    document.getElementById('erro_horas').textContent = '';
+    document.getElementById('erro_motivo').textContent = '';
+    document.getElementById('erro_termo').textContent = '';
+
+    if (nome.length < 3) {
+        document.getElementById('erro_nome').textContent = 'O seu nome deve ter pelo menos 3 caracteres';
+        valido = false;
+    }
+
+    if (!email.includes('@')) {
+        document.getElementById('erro_email').textContent = 'Insira um e-mail válido.';
+        valido = false;
+    }
+
+    if (telefone.length < 8) {
+        document.getElementById('erro_telefone').textContent = 'Insira no mínimo os 8 dígitos';
+        valido = false;
+    }
+
+    if (cpf == '') {
+        document.getElementById('erro_cpf').textContent = 'Seu CPF é obrigatório';
+        valido = false;
+    }
+
+    if (motivo.length < 10) {
+        document.getElementById('erro_motivo').textContent = 'Insira no mínimo 10 caracteres';
+        valido = false;
+    }
 })
